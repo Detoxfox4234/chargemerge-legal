@@ -239,6 +239,35 @@ section[id] {
   object-position: center bottom;
 }
 
+/* Erste Feature-Zeile: Anbieter-Vergleich mit iPhone-Ansicht */
+.lp-feature-lead {
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 58rem) {
+  .lp-feature-lead {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    margin-top: 0;
+  }
+}
+
+.lp-phone-shot {
+  margin: 0;
+  justify-self: center;
+  width: 100%;
+  max-width: 19rem;
+}
+
+.lp-phone-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2.4rem;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+}
+
 /* ---------- Import-Karten & Anbieter-Chips ---------- */
 
 .lp-chips {
