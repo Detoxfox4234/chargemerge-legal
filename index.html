@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="robots" content="index, follow">
+  <title>ChargeMerge – E-Auto-Ladekosten, Eigenbeleg &amp; DATEV-Export für iPhone, iPad &amp; Mac</title>
+  <meta name="description" content="ChargeMerge liest PDF-Laderechnungen und Wallbox-CSVs ein, zeigt Ladekosten und Realverbrauch und erstellt GoBD-Eigenbelege fürs Finanzamt sowie DATEV-Buchungsstapel. 100 % lokal, ohne Konto und ohne Tracking.">
+  <link rel="canonical" href="https://chargemerge.de/">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="ChargeMerge">
+  <meta property="og:url" content="https://chargemerge.de/">
+  <meta property="og:title" content="ChargeMerge – Ladekosten, Fuhrpark &amp; Steuerbelege für E-Autos">
+  <meta property="og:description" content="PDF-Laderechnungen und Wallbox-Exporte einlesen, Kosten und Realverbrauch auswerten, Eigenbeleg und DATEV-Export erstellen. 100 % lokal auf iPhone, iPad und Mac.">
+  <meta property="og:image" content="https://chargemerge.de/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="landing.css?v=4">
+  <script src="nav.js?v=4" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ChargeMerge",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "iOS 17, iPadOS 17, macOS 14",
+    "inLanguage": "de",
+    "url": "https://chargemerge.de/",
+    "image": "https://chargemerge.de/assets/og-image.jpg",
+    "description": "App für Elektroauto-Fahrer, Dienstwagenfahrer und Fuhrparks: PDF-Laderechnungen und Wallbox-CSVs einlesen, Ladekosten und Realverbrauch auswerten, GoBD-Eigenbelege und DATEV-EXTF-Buchungsstapel erstellen. Alle Daten bleiben lokal auf dem Gerät.",
+    "offers": [
+      { "@type": "Offer", "name": "Community (Free)", "price": "0", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "ChargeMerge Pro (Jahresabo)", "price": "24.99", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "ChargeMerge Enterprise (Jahresabo)", "price": "149.00", "priceCurrency": "EUR" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="lp-shell">
+    <header class="top-bar">
+      <a class="brand-lockup" href="./">
+        <img class="brand-icon" src="assets/app-icon.png" alt="" width="40" height="40">
+        <span class="brand-wordmark">
+          <span class="brand-title">ChargeMerge</span>
+          <span class="brand-subtitle">Ladekosten &amp; Fuhrpark</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptmenue" aria-label="Menü öffnen" hidden>
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+          <path class="nav-toggle-bars" d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          <path class="nav-toggle-close" d="M5 5l12 12M17 5L5 17" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="nav-links" id="hauptmenue" aria-label="Hauptnavigation">
+        <a class="nav-link" href="#funktionen">Funktionen</a>
+        <a class="nav-link" href="#datenschutz">Datenschutz</a>
+        <a class="nav-link" href="#editionen">Editionen</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="nav-link" href="impressum.html#kontakt">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============ Hero ============ -->
+      <section class="lp-hero" aria-labelledby="hero-title">
+        <span class="glass-badge">iPhone · iPad · Mac</span>
+        <h1 id="hero-title" class="lp-hero-title">Ladekosten, Fuhrpark &amp; Steuerbelege – <strong>100&nbsp;% lokal</strong> auf deinen Apple-Geräten</h1>
+        <p class="lp-hero-lead">
+          ChargeMerge liest deine PDF-Laderechnungen und Wallbox-Exporte ein, zeigt dir Kosten und Realverbrauch und erstellt den Eigenbeleg fürs Finanzamt sowie den DATEV-Buchungsstapel für die Steuerkanzlei. Ohne Konto, ohne Cloud-Zwang, ohne Tracking.
+        </p>
+        <div class="hero-actions">
+          <!-- APP-STORE-LINK: Sobald die App im App Store verfügbar ist, dieses <span> durch
+               <a class="btn-champagne btn-large" href="https://apps.apple.com/de/app/…">Laden im App Store</a> ersetzen
+               (ebenso im Abschluss-Bereich weiter unten). -->
+          <span class="btn-champagne btn-large" aria-disabled="true">Demnächst im App Store</span>
+          <a class="btn-secondary btn-large" href="#funktionen">Funktionen ansehen</a>
+        </div>
+        <p class="lp-hero-note">Kostenlos für 1 Fahrzeug · iOS&nbsp;17+, iPadOS&nbsp;17+ und macOS&nbsp;14+</p>
+
+        <figure class="lp-hero-visual">
+          <img src="assets/hero-geraete.png" width="1500" height="733" alt="ChargeMerge auf iPhone, iPad, iMac und MacBook: Cockpit mit Ladekosten, Fahrleistung und Ladekarte" fetchpriority="high">
+        </figure>
+      </section>
+
+      <ul class="lp-facts" aria-label="ChargeMerge auf einen Blick">
+        <li class="spec-tile">
+          <span class="spec-label">Datenhaltung</span>
+          <span class="spec-value">100 % lokal</span>
+          <span class="spec-detail">Kein Konto, keine Cloud-Pflicht, kein Tracking</span>
+        </li>
+        <li class="spec-tile">
+          <span class="spec-label">Import</span>
+          <span class="spec-value">PDF &amp; CSV</span>
+          <span class="spec-detail">Laderechnungen, Sammelrechnungen und Wallbox-Exporte</span>
+        </li>
+        <li class="spec-tile">
+          <span class="spec-label">Steuer &amp; Buchhaltung</span>
+          <span class="spec-value">GoBD &amp; DATEV</span>
+          <span class="spec-detail">DIN-A4-Eigenbeleg und EXTF-Buchungsstapel (SKR03 / SKR04)</span>
+        </li>
+        <li class="spec-tile">
+          <span class="spec-label">Ein Abo für alle Geräte</span>
+          <span class="spec-value">iPhone · iPad · Mac</span>
+          <span class="spec-detail">Nativ in Swift &amp; SwiftUI entwickelt</span>
+        </li>
+      </ul>
+
+      <!-- ============ Funktionen ============ -->
+      <section class="lp-section" id="funktionen" aria-labelledby="funktionen-title">
+        <div class="lp-section-head">
+          <span class="eyebrow">Funktionen</span>
+          <h2 id="funktionen-title" class="lp-section-title">Von der Laderechnung bis zum fertigen Steuerbeleg</h2>
+          <p class="lp-section-lead">
+            Für E-Auto-Fahrer, Dienstwagenfahrer, Selbstständige und Fuhrparks, die ihre Ladekosten nicht länger von Hand in Tabellen übertragen wollen.
+          </p>
+        </div>
+
+        <div class="card-grid card-grid-2">
+          <article class="luxury-card">
+            <span class="card-kicker">PDF-Rechnungen</span>
+            <h3 class="card-title">Laderechnungen automatisch einlesen</h3>
+            <p>
+              Zieh die Rechnung in die App oder teile sie direkt aus Mail oder der Dateien-App. ChargeMerge erkennt jeden einzelnen Ladevorgang mit Datum, Standort, kWh, Netto- und Bruttobetrag – auch aus mehrseitigen Monatsrechnungen, mit ausländischen Steuersätzen und aus gescannten Belegen per Texterkennung.
+            </p>
+            <ul class="lp-chips" aria-label="Unterstützte Rechnungen">
+              <li>MB.CHARGE / DCS</li>
+              <li>EnBW mobility+</li>
+              <li>Electra</li>
+              <li>Tesla Supercharger</li>
+              <li>Elli / VW We Charge</li>
+              <li>CUPRA &amp; Škoda</li>
+              <li>weitere PDF-Belege</li>
+            </ul>
+          </article>
+
+          <article class="luxury-card">
+            <span class="card-kicker">Wallbox &amp; CSV</span>
+            <h3 class="card-title">Zuhause laden zählt mit</h3>
+            <p>
+              Importiere die CSV-Exporte deiner Wallbox. Enthält die Datei keine Preise, rechnet ChargeMerge die Kosten über deinen hinterlegten Hausstrompreis aus. Vor dem Speichern prüfst du alle erkannten Ladevorgänge in einer Vorschau; doppelte Einträge werden automatisch erkannt.
+            </p>
+            <ul class="lp-chips" aria-label="Unterstützte Wallbox-Exporte">
+              <li>Easee</li>
+              <li>go-e</li>
+              <li>KEBA</li>
+              <li>cFos</li>
+              <li>ABL</li>
+              <li>be.ENERGISED</li>
+              <li>Universal-CSV</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="lp-feature">
+          <div class="lp-feature-text">
+            <span class="eyebrow">Cockpit</span>
+            <h3 class="lp-feature-title">Alle Ladekosten auf einen Blick</h3>
+            <p>Sechs Kennzahlen zeigen dir sofort, was dein E-Auto wirklich kostet – für einen Monat, einen Ladetyp oder den gesamten Zeitraum.</p>
+            <ul class="lp-checks">
+              <li><strong>Energie &amp; Kosten</strong> mit Netto, Mehrwertsteuer und Brutto</li>
+              <li><strong>Ø Preis pro kWh</strong> über alle Ladekarten und Tarife</li>
+              <li><strong>Realverbrauch</strong> und Stromkosten pro 100&nbsp;km</li>
+              <li><strong>Diagramme</strong> für den Monatsverlauf und den Anteil je Anbieter</li>
+            </ul>
+          </div>
+          <figure class="lp-window">
+            <img src="assets/mac-cockpit.jpg" width="1600" height="1041" loading="lazy" alt="Cockpit auf dem Mac mit Kennzahlen zu geladener Energie, Gesamtkosten, Durchschnittspreis, Ladeleistung und Realverbrauch">
+          </figure>
+        </div>
+
+        <div class="lp-feature lp-feature-flip">
+          <div class="lp-feature-text">
+            <span class="eyebrow">Ladekarte</span>
+            <h3 class="lp-feature-title">Sieh, wo du geladen hast</h3>
+            <p>Alle Ladestandorte erscheinen auf einer Apple-Karte, farblich nach HPC, DC und AC unterschieden.</p>
+            <ul class="lp-checks">
+              <li><strong>Standorte gebündelt</strong> mit Ladevorgängen, Gesamtkosten und Ø Preis</li>
+              <li><strong>Genaue Position</strong> der Ladesäule statt nur der Straßenadresse</li>
+              <li><strong>Route starten</strong> mit einem Klick in Apple Karten</li>
+            </ul>
+          </div>
+          <figure class="lp-window">
+            <img src="assets/mac-ladekarte.jpg" width="1600" height="1040" loading="lazy" alt="Ladekarte auf dem Mac mit markierten Ladestandorten und Detailkarte zu einem Standort">
+          </figure>
+        </div>
+
+        <div class="lp-feature">
+          <div class="lp-feature-text">
+            <span class="eyebrow">Fahrleistung &amp; Ersparnis</span>
+            <h3 class="lp-feature-title">Realverbrauch statt Werksangabe</h3>
+            <p>Trag deine Kilometer monatlich ein oder gib einmal die Gesamtstrecke an – ChargeMerge verteilt sie passend auf die Monate und vergleicht deinen Verbrauch mit dem WLTP-Wert.</p>
+            <ul class="lp-checks">
+              <li><strong>Vergleich mit Benzin und Diesel</strong> bei frei einstellbarem Spritpreis und Verbrauch</li>
+              <li><strong>Ersparnis in Euro</strong> gesamt und pro 100&nbsp;km</li>
+              <li><strong>Eingespartes CO₂</strong> nach deinem Strommix</li>
+            </ul>
+          </div>
+          <figure class="lp-window">
+            <img src="assets/mac-fahrleistung.jpg" width="1600" height="1041" loading="lazy" alt="Ansicht Fahrleistung und Ersparnis auf dem Mac mit Ersparnis gegenüber Benzin, eingespartem CO₂ und Realverbrauch">
+          </figure>
+        </div>
+
+        <div class="lp-feature lp-feature-flip">
+          <div class="lp-feature-text">
+            <span class="eyebrow">Steuer &amp; DATEV</span>
+            <h3 class="lp-feature-title">Belege, die Finanzamt und Steuerkanzlei annehmen</h3>
+            <p>Aus deinen Ladevorgängen entsteht ein druckfertiger Nachweis – für die Steuererklärung, den Arbeitgeber oder die Buchhaltung.</p>
+            <ul class="lp-checks">
+              <li><strong>DIN-A4-Eigenbeleg als PDF</strong> für Finanzamt (§&nbsp;9 EStG) und Arbeitgeber (R&nbsp;9.5 LStR)</li>
+              <li><strong>DATEV-EXTF-Buchungsstapel</strong> für SKR03 und SKR04 mit Vorsteuer und Kostenstelle</li>
+              <li><strong>Ausländische Steuersätze</strong> werden erkannt und korrekt ausgewiesen</li>
+              <li><strong>Originalbelege</strong> bleiben nach Jahr und Monat geordnet archiviert</li>
+            </ul>
+          </div>
+          <figure class="lp-window">
+            <img src="assets/mac-steuer-datev.jpg" width="1600" height="1041" loading="lazy" alt="Ansicht Steuer und DATEV auf dem Mac mit Exportoptionen für PDF-Steuerbericht und DATEV-Buchungsstapel">
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ iPhone ============ -->
+      <section class="lp-section" aria-labelledby="iphone-title">
+        <div class="lp-section-head">
+          <span class="eyebrow">Unterwegs</span>
+          <h2 id="iphone-title" class="lp-section-title">Dieselbe App auf dem iPhone</h2>
+          <p class="lp-section-lead">Rechnung direkt nach dem Laden aus der Mail teilen, Kilometerstand eintragen, Kosten prüfen – alles in der Hosentasche.</p>
+        </div>
+
+        <ul class="lp-phones">
+          <li>
+            <figure>
+              <img src="assets/iphone-08-cockpit-uebersicht.png" width="480" height="1004" loading="lazy" alt="iPhone mit Cockpit-Kennzahlen">
+              <figcaption><strong>Cockpit</strong>Kennzahlen auf einen Blick</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/iphone-07-cockpit-diagramme.png" width="480" height="1004" loading="lazy" alt="iPhone mit Diagrammen zu Monatsverlauf und Anbietern">
+              <figcaption><strong>Diagramme</strong>Monatsverlauf &amp; Anbieter</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/iphone-03-ladekarte-detail.png" width="480" height="1004" loading="lazy" alt="iPhone mit Ladekarte und Details zu einem Ladestandort">
+              <figcaption><strong>Ladekarte</strong>Standorte &amp; Navigation</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <img src="assets/iphone-05-effizienz-fahrleistung.png" width="480" height="1004" loading="lazy" alt="iPhone mit Fahrleistung und Realverbrauch">
+              <figcaption><strong>Effizienz</strong>Fahrleistung &amp; Verbrauch</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ Datenschutz ============ -->
+      <section class="lp-section" id="datenschutz" aria-labelledby="datenschutz-title">
+        <div class="lp-privacy">
+          <div>
+            <span class="eyebrow">Privacy by Design</span>
+            <h2 id="datenschutz-title" class="lp-section-title">Deine Rechnungen gehören dir</h2>
+            <p class="lp-section-lead">
+              Laderechnungen enthalten Adresse, Kennzeichen und Bewegungsdaten. ChargeMerge verarbeitet sie deshalb ausschließlich auf deinem Gerät. Deine Rechnungen und Fahrdaten werden an keinen ChargeMerge-Server übertragen.
+            </p>
+          </div>
+          <ul class="lp-checks">
+            <li><strong>Kein Konto, keine Anmeldung</strong> – installieren und loslegen</li>
+            <li><strong>Kein Tracking, keine Analyse-Dienste</strong> und keine Werbe-IDs</li>
+            <li><strong>Rechnungen werden lokal ausgelesen</strong>, auch die Texterkennung läuft auf dem Gerät</li>
+            <li><strong>Komplett-Backup als Datei</strong> für den Gerätewechsel – ganz ohne Cloud</li>
+            <li><strong>Alles löschbar</strong>: einzelne Ladevorgänge oder der gesamte Datenbestand samt Belegen</li>
+            <li>Details in der <a class="inline-link" href="datenschutz.html">Datenschutzerklärung</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ Editionen ============ -->
+      <section class="lp-section" id="editionen" aria-labelledby="editionen-title">
+        <div class="lp-section-head">
+          <span class="eyebrow">Editionen &amp; Preise</span>
+          <h2 id="editionen-title" class="lp-section-title">Kostenlos starten, bei Bedarf erweitern</h2>
+          <p class="lp-section-lead">Alle Rechnungs-Importe, das Cockpit, die Ladekarte und die Kilometer-Verwaltung sind in jeder Edition enthalten.</p>
+        </div>
+
+        <div class="lp-plans">
+          <article class="lp-plan">
+            <span class="card-kicker">Community</span>
+            <h3 class="lp-plan-name">Free</h3>
+            <p class="lp-plan-for">Für ein privates E-Auto</p>
+            <p class="lp-price">0 €</p>
+            <p class="lp-price-alt">dauerhaft kostenlos</p>
+            <ul class="lp-checks">
+              <li><strong>1 Fahrzeug</strong></li>
+              <li>Alle PDF- und CSV-Importe</li>
+              <li>Cockpit, Diagramme &amp; Ladekarte</li>
+              <li>Kilometer &amp; Realverbrauch</li>
+              <li>Tarif-Abos &amp; Wallbox-Strompreis</li>
+              <li>Dezente Hinweis-Banner ohne Tracking</li>
+            </ul>
+          </article>
+
+          <article class="lp-plan lp-plan-featured">
+            <span class="card-kicker">Für Haushalt &amp; Dienstwagen</span>
+            <h3 class="lp-plan-name">ChargeMerge Pro</h3>
+            <p class="lp-plan-for">Wenn du Ladekosten beim Finanzamt oder Arbeitgeber einreichst</p>
+            <p class="lp-price">24,99 € <small>/ Jahr</small></p>
+            <p class="lp-price-alt">oder 2,99 € pro Monat</p>
+            <ul class="lp-checks">
+              <li><strong>Bis zu 3 Fahrzeuge</strong></li>
+              <li>Alles aus Free, <strong>100&nbsp;% werbefrei</strong></li>
+              <li><strong>DIN-A4-Eigenbeleg als PDF</strong> (§&nbsp;9 EStG / R&nbsp;9.5 LStR)</li>
+              <li><strong>Verbrenner- &amp; CO₂-Vergleich</strong></li>
+            </ul>
+          </article>
+
+          <article class="lp-plan">
+            <span class="card-kicker">Für Selbstständige &amp; Fuhrparks</span>
+            <h3 class="lp-plan-name">ChargeMerge Enterprise</h3>
+            <p class="lp-plan-for">Wenn die Ladekosten in die Buchhaltung gehen</p>
+            <p class="lp-price">149,00 € <small>/ Jahr</small></p>
+            <p class="lp-price-alt">oder 14,99 € pro Monat</p>
+            <ul class="lp-checks">
+              <li><strong>Bis zu 50 Fahrzeuge</strong></li>
+              <li>Alles aus Pro</li>
+              <li><strong>DATEV-EXTF-Export</strong> (SKR03 / SKR04)</li>
+              <li><strong>Flotten-Cockpit</strong> mit Fahrer, Kennzeichen und Kostenstelle</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="lp-plans-note">
+          Abos laufen über deinen Apple-Account, gelten auf iPhone, iPad und Mac und sind jederzeit kündbar. Mehr als 50 Fahrzeuge? Für Großflotten gibt es eine Bereitstellung über Apple Business Manager – <a class="inline-link" href="impressum.html#kontakt">B2B-Anfrage senden</a>.
+        </p>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section class="lp-section" id="faq" aria-labelledby="faq-title">
+        <div class="lp-section-head">
+          <span class="eyebrow">Häufige Fragen</span>
+          <h2 id="faq-title" class="lp-section-title">Gut zu wissen</h2>
+        </div>
+
+        <div class="lp-faq">
+          <details>
+            <summary>Welche Rechnungen kann ChargeMerge einlesen?</summary>
+            <p>PDF-Rechnungen von MB.CHARGE und anderen Marken von Digital Charging Solutions, EnBW mobility+, Electra, Tesla Supercharger sowie Elli, VW We Charge, CUPRA Charging und Škoda Powerpass. Für andere Anbieter gibt es einen allgemeinen PDF-Leser, und gescannte Belege werden per Texterkennung verarbeitet. Dazu kommen CSV-Exporte von Wallboxen wie Easee, go-e, KEBA, cFos und ABL. Fehlt dein Anbieter, schick uns gern eine Beispielrechnung.</p>
+          </details>
+          <details>
+            <summary>Brauche ich ein Konto oder eine Internetverbindung?</summary>
+            <p>Nein. ChargeMerge funktioniert ohne Anmeldung, und deine Rechnungen werden auf dem Gerät ausgelesen. Eine Internetverbindung wird nur für Apple Karten (Kartenansicht und Standortsuche), für Käufe im App Store und in der kostenlosen Edition für den Abruf der Hinweis-Banner verwendet.</p>
+          </details>
+          <details>
+            <summary>Gilt mein Abo auf iPhone, iPad und Mac?</summary>
+            <p>Ja. Ein Abo gilt für alle Geräte, auf denen du mit demselben Apple-Account angemeldet bist. Über „Käufe wiederherstellen“ wird es auf einem neuen Gerät sofort aktiv.</p>
+          </details>
+          <details>
+            <summary>Wie bekomme ich meine Daten auf ein anderes Gerät?</summary>
+            <p>Unter „Fuhrpark &amp; Profil“ sicherst du alle Fahrzeuge, Ladevorgänge, Kilometerstände und Einstellungen in einer einzigen Backup-Datei. Diese Datei öffnest du auf dem anderen Gerät und stellst alles wieder her. Eine automatische Synchronisation gibt es bewusst noch nicht.</p>
+          </details>
+          <details>
+            <summary>Was gebe ich meiner Steuerkanzlei?</summary>
+            <p>Für die Buchhaltung den DATEV-EXTF-Buchungsstapel (Enterprise), den die Kanzlei direkt in DATEV importiert – wahlweise für SKR03 oder SKR04, mit Belegdatum, Rechnungsnummer, Kennzeichen und Kostenstelle. Für die Einkommensteuer oder die Erstattung durch den Arbeitgeber reicht der PDF-Eigenbeleg (Pro).</p>
+          </details>
+          <details>
+            <summary>Ersetzt ChargeMerge eine Steuerberatung?</summary>
+            <p>Nein. ChargeMerge bereitet deine Ladekosten sauber und nachvollziehbar auf. Ob und wie du sie steuerlich ansetzen kannst, klärst du mit deiner Steuerberatung oder dem Finanzamt.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- ============ Abschluss ============ -->
+      <section class="lp-cta" aria-labelledby="cta-title">
+        <img src="assets/app-icon.png" width="72" height="72" alt="ChargeMerge App-Icon" loading="lazy">
+        <h2 id="cta-title" class="lp-section-title">Schluss mit Ladekosten-Tabellen</h2>
+        <p class="lp-section-lead">Starte kostenlos mit einem Fahrzeug – ohne Konto und ohne Risiko für deine Daten.</p>
+        <div class="hero-actions">
+          <span class="btn-champagne btn-large" aria-disabled="true">Demnächst im App Store</span>
+          <a class="btn-secondary btn-large" href="impressum.html#kontakt">Support kontaktieren</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 ChargeMerge für iOS, iPadOS &amp; macOS</span>
+      <div class="footer-links">
+        <a class="inline-link" href="impressum.html">Support &amp; Impressum</a>
+        <a class="inline-link" href="datenschutz.html">Datenschutzerklärung</a>
+        <a class="inline-link" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener noreferrer">Apple Standard-EULA</a>
+      </div>
+    </footer>
+    <p class="lp-legal-note">
+      Apple, iPhone, iPad, Mac und App Store sind Marken von Apple Inc. Alle genannten Ladeanbieter, Wallbox-Hersteller, Fahrzeugmarken und Abrechnungssysteme (u.&nbsp;a. DATEV) sind Marken ihrer jeweiligen Inhaber und dienen ausschließlich der beschreibenden Zuordnung. ChargeMerge ist ein unabhängiges Produkt ohne wirtschaftliche oder vertragliche Verbindung zu diesen Unternehmen.
+    </p>
+  </div>
+
+</body>
+</html>

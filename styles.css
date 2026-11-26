@@ -1,0 +1,664 @@
+/* ChargeMerge — Haute Automotive Luxury Web System
+   Mirrors Sources/ChargeMerge/Theme/LiquidGlassTheme.swift
+   Palette: Matte Anthracite Graphite, Warm Ivory Alabaster & Brushed Champagne Gold (#C8A97E) */
+
+:root {
+  /* Light Mode Tokens (Warm Ivory & Alabaster Stone) */
+  --bg-canvas-light: #f4f1ec;
+  --bg-canvas-end-light: #ebe5dc;
+  --bg-surface-top-light: rgba(255, 255, 255, 0.96);
+  --bg-surface-bottom-light: rgba(248, 245, 240, 0.95);
+  --bg-subtle-light: rgba(24, 25, 28, 0.035);
+  --text-primary-light: #17181c;
+  --text-secondary-light: #4e5159;
+  --text-muted-light: #686c75;
+  --accent-light: #7c5b33;
+  --accent-champagne-light: #8f6b3e;
+  --border-card-light: rgba(143, 107, 62, 0.32);
+  --border-hairline-light: rgba(24, 25, 28, 0.09);
+  --rule-accent-light: rgba(143, 107, 62, 0.24);
+  --spotlight-light: rgba(200, 169, 126, 0.14);
+  --shadow-card-light: 0 3px 10px rgba(20, 18, 14, 0.05);
+  --scrollbar-thumb-light: #8b7b67;
+  --scrollbar-track-light: #eae4da;
+
+  /* Dark Mode Tokens (Matte Anthracite Charcoal & Brushed Champagne Gold) */
+  --bg-canvas-dark: #16181c;
+  --bg-canvas-end-dark: #1d2025;
+  --bg-surface-top-dark: rgba(41, 43, 49, 0.95);
+  --bg-surface-bottom-dark: rgba(31, 33, 38, 0.97);
+  --bg-subtle-dark: rgba(255, 255, 255, 0.035);
+  --text-primary-dark: #f2efe9;
+  --text-secondary-dark: #b6b9c2;
+  --text-muted-dark: #8e929d;
+  --accent-dark: #c8a97e;
+  --accent-champagne-dark: #dcc299;
+  --border-card-dark: rgba(200, 169, 126, 0.28);
+  --border-hairline-dark: rgba(255, 255, 255, 0.08);
+  --rule-accent-dark: rgba(200, 169, 126, 0.22);
+  --spotlight-dark: rgba(200, 169, 126, 0.10);
+  --shadow-card-dark: 0 4px 14px rgba(0, 0, 0, 0.34);
+  --scrollbar-thumb-dark: #6e6559;
+  --scrollbar-track-dark: #181a1e;
+
+  /* Default Assignments (Light Fallback) */
+  --bg-canvas: var(--bg-canvas-light);
+  --bg-canvas-end: var(--bg-canvas-end-light);
+  --bg-surface-top: var(--bg-surface-top-light);
+  --bg-surface-bottom: var(--bg-surface-bottom-light);
+  --bg-subtle: var(--bg-subtle-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --text-muted: var(--text-muted-light);
+  --accent: var(--accent-light);
+  --accent-champagne: var(--accent-champagne-light);
+  --border-card: var(--border-card-light);
+  --border-hairline: var(--border-hairline-light);
+  --rule-accent: var(--rule-accent-light);
+  --spotlight: var(--spotlight-light);
+  --shadow-card: var(--shadow-card-light);
+  --scrollbar-thumb: var(--scrollbar-thumb-light);
+  --scrollbar-track: var(--scrollbar-track-light);
+
+  @media (prefers-color-scheme: dark) {
+    --bg-canvas: var(--bg-canvas-dark);
+    --bg-canvas-end: var(--bg-canvas-end-dark);
+    --bg-surface-top: var(--bg-surface-top-dark);
+    --bg-surface-bottom: var(--bg-surface-bottom-dark);
+    --bg-subtle: var(--bg-subtle-dark);
+    --text-primary: var(--text-primary-dark);
+    --text-secondary: var(--text-secondary-dark);
+    --text-muted: var(--text-muted-dark);
+    --accent: var(--accent-dark);
+    --accent-champagne: var(--accent-champagne-dark);
+    --border-card: var(--border-card-dark);
+    --border-hairline: var(--border-hairline-dark);
+    --rule-accent: var(--rule-accent-dark);
+    --spotlight: var(--spotlight-dark);
+    --shadow-card: var(--shadow-card-dark);
+    --scrollbar-thumb: var(--scrollbar-thumb-dark);
+    --scrollbar-track: var(--scrollbar-track-dark);
+  }
+
+  @supports (color: light-dark(white, black)) {
+    --bg-canvas: light-dark(var(--bg-canvas-light), var(--bg-canvas-dark));
+    --bg-canvas-end: light-dark(var(--bg-canvas-end-light), var(--bg-canvas-end-dark));
+    --bg-surface-top: light-dark(var(--bg-surface-top-light), var(--bg-surface-top-dark));
+    --bg-surface-bottom: light-dark(var(--bg-surface-bottom-light), var(--bg-surface-bottom-dark));
+    --bg-subtle: light-dark(var(--bg-subtle-light), var(--bg-subtle-dark));
+    --text-primary: light-dark(var(--text-primary-light), var(--text-primary-dark));
+    --text-secondary: light-dark(var(--text-secondary-light), var(--text-secondary-dark));
+    --text-muted: light-dark(var(--text-muted-light), var(--text-muted-dark));
+    --accent: light-dark(var(--accent-light), var(--accent-dark));
+    --accent-champagne: light-dark(var(--accent-champagne-light), var(--accent-champagne-dark));
+    --border-card: light-dark(var(--border-card-light), var(--border-card-dark));
+    --border-hairline: light-dark(var(--border-hairline-light), var(--border-hairline-dark));
+    --rule-accent: light-dark(var(--rule-accent-light), var(--rule-accent-dark));
+    --spotlight: light-dark(var(--spotlight-light), var(--spotlight-dark));
+    --shadow-card: light-dark(var(--shadow-card-light), var(--shadow-card-dark));
+    --scrollbar-thumb: light-dark(var(--scrollbar-thumb-light), var(--scrollbar-thumb-dark));
+    --scrollbar-track: light-dark(var(--scrollbar-track-light), var(--scrollbar-track-dark));
+  }
+
+  color-scheme: light dark;
+  accent-color: var(--accent);
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --border-card-light: rgba(110, 78, 38, 0.65);
+    --border-card-dark: rgba(220, 194, 153, 0.65);
+  }
+}
+
+@media (forced-colors: active) {
+  :root {
+    --border-card: CanvasText;
+    --border-hairline: GrayText;
+    --rule-accent: GrayText;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background-color: var(--bg-canvas);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.62;
+  color: var(--text-primary);
+  background-color: var(--bg-canvas);
+  background-image:
+    radial-gradient(circle at 50% -12%, var(--spotlight) 0%, transparent 58%),
+    linear-gradient(180deg, var(--bg-canvas) 0%, var(--bg-canvas-end) 100%);
+  background-attachment: fixed;
+  text-align: start;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: rgba(200, 169, 126, 0.28);
+  color: var(--text-primary);
+}
+
+.page-shell {
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: 2rem 1.25rem 4.5rem;
+}
+
+@media (min-width: 48rem) {
+  .page-shell {
+    padding: 2.75rem 2rem 5.5rem;
+  }
+}
+
+/* Top Architectural Navigation Bar */
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  padding-bottom: 1.25rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.brand-crest {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.brand-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+}
+
+.brand-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.brand-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem 1.25rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 2.25rem;
+  padding-block: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-secondary);
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--text-primary);
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--accent-champagne);
+  font-weight: 600;
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Mobiles Menü (Hamburger) ---------- */
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  color: var(--text-primary);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-card);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.nav-toggle-close,
+.nav-toggle[aria-expanded="true"] .nav-toggle-bars {
+  display: none;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-close {
+  display: inline;
+}
+
+@media (max-width: 47.99rem) {
+  .has-nav-toggle .top-bar {
+    flex-wrap: wrap;
+  }
+
+  .has-nav-toggle .nav-toggle:not([hidden]) {
+    display: inline-flex;
+  }
+
+  .has-nav-toggle .nav-links {
+    display: none;
+    flex: 1 0 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.25rem 1rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(135deg, var(--bg-surface-top) 0%, var(--bg-surface-bottom) 100%);
+    border: 1px solid var(--border-card);
+    box-shadow: var(--shadow-card);
+  }
+
+  .has-nav-toggle .nav-links.is-open {
+    display: flex;
+  }
+
+  .has-nav-toggle .nav-link {
+    min-block-size: 3rem;
+    font-size: 0.8125rem;
+    border-bottom: 1px solid var(--border-hairline);
+  }
+
+  .has-nav-toggle .nav-link:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Concierge Hero Card (mirrors DashboardView.heroConciergeCard & TaxAndDatevView.headerBanner) */
+.hero-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem 1.5rem;
+  margin-bottom: 2.25rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--bg-surface-top) 0%, var(--bg-surface-bottom) 100%);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 48rem) {
+  .hero-card {
+    padding: 2.25rem 2.25rem;
+  }
+}
+
+.eyebrow-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.glass-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  min-block-size: 1.5rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background-color: rgba(200, 169, 126, 0.11);
+  border: 1px solid var(--border-card);
+  border-radius: 0.25rem;
+}
+
+.hero-heading {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.6rem, 1.25rem + 1.5vw, 2.25rem);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+.hero-lead {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+/* GlassActionButton (mirrors LiquidGlassTheme.swift lines 299-354) */
+.btn-champagne {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-block-size: 2.375rem;
+  padding: 0.55rem 1.05rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #16171a;
+  background: linear-gradient(135deg, #d4b587 0%, #ab8a61 100%);
+  border: 1px solid rgba(200, 169, 126, 0.85);
+  border-radius: 0.375rem;
+  transition: filter 0.16s ease, transform 0.16s ease;
+}
+
+.btn-champagne:hover,
+.btn-champagne:focus-visible {
+  filter: brightness(1.06);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-block-size: 2.375rem;
+  padding: 0.55rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-primary);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-card);
+  border-radius: 0.375rem;
+  transition: border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  border-color: var(--accent);
+}
+
+/* Architectural Section Header with Hairline Rule (mirrors DashboardView.sectionHeader) */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 2rem 0 0.875rem;
+}
+
+.section-divider-title {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--rule-accent);
+}
+
+/* Luxury Surface Cards & Grids */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 44rem) {
+  .card-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.luxury-card {
+  padding: 1.35rem 1.35rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, var(--bg-surface-top) 0%, var(--bg-surface-bottom) 100%);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-card);
+}
+
+@media (min-width: 48rem) {
+  .luxury-card {
+    padding: 1.5rem 1.65rem;
+  }
+}
+
+.card-kicker {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.card-title {
+  margin: 0 0 0.65rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+
+.luxury-card p {
+  margin: 0 0 0.75rem;
+  max-width: 66ch;
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  text-wrap: pretty;
+}
+
+.luxury-card p:last-child {
+  margin-bottom: 0;
+}
+
+.luxury-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+  max-width: 66ch;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.luxury-list li {
+  margin-bottom: 0.55rem;
+  text-wrap: pretty;
+}
+
+.luxury-list li:last-child {
+  margin-bottom: 0;
+}
+
+.luxury-list strong,
+.luxury-card strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Telemetry Spec Tiles (mirrors GlassKPICard) */
+.spec-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1.15rem 1.2rem;
+  border-radius: 0.375rem;
+  background: linear-gradient(135deg, var(--bg-surface-top) 0%, var(--bg-surface-bottom) 100%);
+  border: 1px solid var(--border-card);
+}
+
+.spec-value {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.spec-label {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-champagne);
+}
+
+.spec-detail {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+/* Key-Value Definition Rows for Legal / Imprint Blocks */
+.kv-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+@media (min-width: 36rem) {
+  .kv-table {
+    grid-template-columns: 11.5rem 1fr;
+    gap: 0.65rem 1.5rem;
+  }
+}
+
+.kv-term {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-top: 0.18rem;
+}
+
+.kv-value {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+}
+
+.inline-link {
+  color: var(--accent-champagne);
+  text-decoration: underline;
+  text-decoration-color: var(--border-card);
+  text-underline-offset: 0.2em;
+}
+
+.inline-link:hover,
+.inline-link:focus-visible {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* Minimal Architectural Footer */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-hairline);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Legacy scrollbar fallback for older WebKit without scrollbar-color */
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+}

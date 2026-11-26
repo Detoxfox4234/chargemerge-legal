@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "_anleitung": "Solange 'campaigns' leer ([]) ist, zeigt ChargeMerge Free automatisch die eigenen 'PRO-TIPP'-Karten an. Sobald du einen Werbepartner hast, kopiere das Objekt aus '_beispiel_inaktiv' in das Array 'campaigns' (nur https-Links!). Das Banner wechselt dann in der App automatisch auf 'ANZEIGE' und schaltet sich nach 'validUntil' von selbst wieder ab.",
+  "_beispiel_inaktiv": {
+    "id": "partner_wallbox_2027_01",
+    "sponsorLabel": "MUSTER-WALLBOX GMBH",
+    "headline": "11 kW Smart-Wallbox mit MID-Zähler für Dienstwagen",
+    "subtitle": "Finanzamt-konforme Ladeerfassung inkl. CSV-Export – exklusiver Vorteil für ChargeMerge-Nutzer.",
+    "ctaTitle": "Angebot ansehen",
+    "systemIcon": "bolt.car.fill",
+    "externalURL": "https://beispiel-partner.de/chargemerge",
+    "validUntil": "2027-12-31"
+  },
+  "campaigns": []
+}
