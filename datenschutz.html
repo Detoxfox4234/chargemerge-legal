@@ -91,7 +91,8 @@
           <li><strong>Lade- &amp; Abrechnungsdaten:</strong> Datum, Uhrzeit, Ladedauer, Leistung (kW), Energiemenge (kWh), Netto-/MwSt.-/Bruttobeträge, Rechnungsnummern, EVSE-IDs sowie Standorte der Ladepunkte.</li>
           <li><strong>Fahrzeug- &amp; Flottendaten:</strong> Fahrzeugmodell, Batteriekapazität, WLTP-Referenzwert, monatliche oder gesamte Kilometerstände, optionale Tarif-Grundgebühren sowie (optional) Kennzeichen, Fahrername und Kostenstelle.</li>
           <li><strong>Keine Übermittlung an den Entwickler:</strong> Es existiert kein Backend-Server von ChargeMerge. Weder PDF-/CSV-Rechnungen noch Nutzungs- oder Fahrzeugdaten werden an den Anbieter übertragen.</li>
-          <li><strong>Kein Tracking &amp; keine Drittanbieter-SDKs:</strong> Die App bindet keinerlei Analyse-, Telemetrie- oder Tracking-Frameworks ein und greift nicht auf Werbe-Identifikatoren (IDFA) zu. Hinweise im kostenlosen Tarif arbeiten vollständig lokal ohne Profilbildung.</li>
+          <li><strong>Kein Tracking &amp; keine Drittanbieter-SDKs:</strong> Die App bindet keinerlei Analyse-, Telemetrie- oder Tracking-Frameworks ein und greift nicht auf Werbe-Identifikatoren (IDFA) zu. Hinweise im kostenlosen Tarif arbeiten ohne Profilbildung, ohne Cookies und ohne Geräte-Kennungen.</li>
+          <li><strong>Abruf der Hinweis-Banner (nur kostenlose Edition):</strong> Die Community-Edition lädt höchstens einmal pro App-Start eine kleine Textdatei mit aktuellen Hinweisen von <code>chargemerge.de/ads.json</code>. Dabei werden keine Nutzer-, Fahrzeug- oder Rechnungsdaten übertragen. Wie bei jedem Internetabruf verarbeitet der Hosting-Dienstleister GitHub Pages (GitHub Inc.) technisch bedingt die IP-Adresse (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). In ChargeMerge Pro und Enterprise findet dieser Abruf nicht statt.</li>
         </ul>
       </article>
 
