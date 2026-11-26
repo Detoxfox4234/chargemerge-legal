@@ -1,0 +1,23 @@
+Datum;Uhrzeit;Anbieter;Betreiber;Standort;Energie (kWh);Netto;Brutto;Dauer;Ladetyp
+02.09.2026;07:14;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;38,4;10,33;12,29;213 Min.;AC
+06.09.2026;13:42;IONITY;IONITY;Rasthof Holmmoor West (A7), 25451 Quickborn;52,6;30,50;36,29;22 Min.;HPC
+09.09.2026;19:05;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;41,2;11,08;13,18;229 Min.;AC
+13.09.2026;10:31;Fastned;Fastned;Rastplatz Vareler Wald (A29), 26316 Varel;47,9;23,75;28,26;22 Min.;HPC
+17.09.2026;18:47;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;35,7;9,60;11,42;198 Min.;AC
+21.09.2026;16:20;Aral pulse;Aral pulse;Kurfürstenallee 2, 28211 Bremen;44,3;23,45;27,91;24 Min.;HPC
+26.09.2026;20:12;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;39,8;10,71;12,74;221 Min.;AC
+01.10.2026;08:55;EnBW mobility+;EnBW;Großmoordamm 63, 21079 Hamburg;49,1;24,34;28,97;25 Min.;HPC
+04.10.2026;21:03;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;42,6;11,45;13,63;237 Min.;AC
+09.10.2026;12:18;IONITY;IONITY;Rasthof Holmmoor West (A7), 25451 Quickborn;55,4;32,13;38,23;23 Min.;HPC
+12.10.2026;19:41;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;37,9;10,19;12,13;211 Min.;AC
+16.10.2026;15:07;EWE Go;EWE Go;Stau 2, 26122 Oldenburg;28,6;14,18;16,87;37 Min.;DC
+20.10.2026;18:22;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;40,3;10,84;12,90;224 Min.;AC
+24.10.2026;11:49;Fastned;Fastned;Rastplatz Vareler Wald (A29), 26316 Varel;51,2;25,39;30,21;23 Min.;HPC
+28.10.2026;20:36;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;36,4;9,79;11,65;202 Min.;AC
+02.11.2026;09:12;EnBW mobility+;EnBW;Großmoordamm 63, 21079 Hamburg;46,8;23,20;27,61;24 Min.;HPC
+05.11.2026;19:28;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;43,1;11,59;13,79;239 Min.;AC
+09.11.2026;14:33;IONITY;IONITY;Rasthof Holmmoor West (A7), 25451 Quickborn;53,9;31,25;37,19;23 Min.;HPC
+12.11.2026;18:54;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;38,7;10,40;12,38;215 Min.;AC
+15.11.2026;16:46;Aral pulse;Aral pulse;Kurfürstenallee 2, 28211 Bremen;41,5;21,97;26,14;23 Min.;HPC
+19.11.2026;20:09;Wallbox Zuhause;Wallbox Zuhause;Wallbox Zuhause, 21335 Lüneburg;44,2;11,88;14,14;246 Min.;AC
+22.11.2026;10:37;EWE Go;EWE Go;Stau 2, 26122 Oldenburg;26,9;13,34;15,87;35 Min.;DC
