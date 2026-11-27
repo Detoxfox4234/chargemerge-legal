@@ -531,3 +531,73 @@ section[id] {
     scroll-behavior: smooth;
   }
 }
+
+/* ---------- Bewegungseffekte der Landingpage (nur mit motion.js: html.has-motion) ---------- */
+
+/* Hero baut sich beim Laden nacheinander auf */
+.has-motion .lp-hero > * {
+  animation: cm-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+.has-motion .lp-hero > :nth-child(1) { animation-delay: 0.05s; }
+.has-motion .lp-hero > :nth-child(2) { animation-delay: 0.13s; }
+.has-motion .lp-hero > :nth-child(3) { animation-delay: 0.21s; }
+.has-motion .lp-hero > :nth-child(4) { animation-delay: 0.29s; }
+.has-motion .lp-hero > :nth-child(5) { animation-delay: 0.37s; }
+
+@keyframes lp-hero-visual {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2.25rem, 0) scale(0.96);
+  }
+}
+
+.has-motion .lp-hero > .lp-hero-visual {
+  animation: lp-hero-visual 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.4s backwards;
+}
+
+/* Mac-Screenshots zoomen im Rahmen sanft heran */
+.has-motion .lp-window[data-reveal] img {
+  scale: 1.08;
+  transition: scale 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.has-motion .lp-window[data-reveal].is-revealed img {
+  scale: 1;
+}
+
+/* Editionen und Karten heben sich unter dem Mauszeiger leicht an */
+.has-motion .lp-plan:not([data-reveal]),
+.has-motion .lp-import-cards > .luxury-card:not([data-reveal]),
+.has-motion .lp-facts > li:not([data-reveal]) {
+  transition: transform 0.3s cubic-bezier(0.22, 0.61, 0.36, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (hover: hover) {
+  .has-motion .lp-plan:not([data-reveal]):hover,
+  .has-motion .lp-import-cards > .luxury-card:not([data-reveal]):hover,
+  .has-motion .lp-facts > li:not([data-reveal]):hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  }
+}
+
+/* FAQ: Antwort blendet beim Aufklappen ein; Plus dreht sich zum Schließen-Zeichen */
+.has-motion .lp-faq details[open] > p {
+  animation: cm-fade 0.45s ease 0.08s backwards;
+}
+
+.has-motion .lp-faq details.is-closing > p {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.has-motion .lp-faq summary {
+  transition: color 0.2s ease;
+}
+
+.has-motion .lp-faq summary:hover {
+  color: var(--accent-champagne);
+}

@@ -648,6 +648,118 @@ body {
   gap: 1rem;
 }
 
+/* ---------- Bewegungseffekte (nur mit motion.js: html.has-motion) ----------
+   motion.js setzt `has-motion` ausschließlich, wenn „Bewegung reduzieren“ aus ist.
+   Ohne die Klasse greift nichts davon und die Seite bleibt statisch. */
+
+@keyframes cm-rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.25rem, 0);
+  }
+}
+
+@keyframes cm-fade {
+  from {
+    opacity: 0;
+  }
+}
+
+/* Schwebende Kopfzeile mit Glas-Hintergrund */
+.has-motion .top-bar {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 50;
+  animation: cm-fade 0.7s ease backwards;
+  transition: border-color 0.3s ease;
+}
+
+.has-motion .top-bar::before {
+  content: "";
+  position: absolute;
+  inset: -0.6rem -0.9rem 0.6rem;
+  z-index: -1;
+  border-radius: 0.9rem;
+  background-color: var(--bg-canvas);
+  background-color: color-mix(in srgb, var(--bg-canvas) 74%, transparent);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-card);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  backdrop-filter: blur(16px) saturate(1.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.has-motion .top-bar.is-stuck {
+  border-bottom-color: transparent;
+}
+
+.has-motion .top-bar.is-stuck::before {
+  opacity: 1;
+}
+
+/* Sprungmarken landen unterhalb der schwebenden Kopfzeile */
+.has-motion [id] {
+  scroll-margin-top: 6rem;
+}
+
+/* Abschnitte der Landingpage bringen bereits eigenen Abstand nach oben mit */
+.has-motion .lp-section[id] {
+  scroll-margin-top: 2rem;
+}
+
+/* Einblenden beim Scrollen: motion.js setzt data-reveal und später .is-revealed */
+.has-motion [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 1.75rem, 0);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.has-motion [data-reveal="zoom"] {
+  transform: translate3d(0, 1.75rem, 0) scale(0.965);
+}
+
+.has-motion [data-reveal="fade"] {
+  transform: none;
+}
+
+.has-motion [data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* Einstieg der Rechtsseiten */
+.has-motion .page-shell .hero-card {
+  animation: cm-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.08s backwards;
+}
+
+/* Kleine Reaktionen auf den Mauszeiger */
+.has-motion a.btn-champagne,
+.has-motion .btn-secondary {
+  transition: filter 0.16s ease, transform 0.2s ease, border-color 0.16s ease, background-color 0.16s ease;
+}
+
+.has-motion a.btn-champagne:hover,
+.has-motion .btn-secondary:hover {
+  transform: translateY(-2px);
+}
+
+@media print {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .has-motion .top-bar {
+    position: static;
+  }
+}
+
 /* Legacy scrollbar fallback for older WebKit without scrollbar-color */
 @supports not (scrollbar-color: auto) {
   ::-webkit-scrollbar {
