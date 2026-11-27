@@ -116,6 +116,76 @@ section[id] {
   }
 }
 
+/* ---------- Film ---------- */
+
+.lp-film {
+  position: relative;
+  max-width: 60rem;
+  margin: 3rem auto 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-card);
+  background-color: #16181c;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 48rem) {
+  .lp-film {
+    margin-top: 4.5rem;
+  }
+}
+
+.lp-film video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lp-film-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 0;
+  color: #16171a;
+  background: linear-gradient(180deg, rgba(22, 24, 28, 0) 40%, rgba(22, 24, 28, 0.35) 100%);
+  border: 0;
+  cursor: pointer;
+}
+
+.lp-film-play[hidden] {
+  display: none;
+}
+
+.lp-film-play svg {
+  box-sizing: content-box;
+  padding: 1.15rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4b587 0%, #ab8a61 100%);
+  border: 1px solid rgba(200, 169, 126, 0.85);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1), filter 0.2s ease;
+}
+
+.lp-film-play:hover svg,
+.lp-film-play:focus-visible svg {
+  filter: brightness(1.08);
+}
+
+.lp-film-play:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -4px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lp-film-play:hover svg {
+    transform: scale(1.08);
+  }
+}
+
 /* ---------- Abschnitts-Überschriften ---------- */
 
 .lp-section {

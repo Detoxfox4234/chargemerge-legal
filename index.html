@@ -22,10 +22,11 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="stylesheet" href="styles.css?v=6">
-  <link rel="stylesheet" href="landing.css?v=6">
-  <script src="motion.js?v=6"></script>
-  <script src="nav.js?v=6" defer></script>
+  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="landing.css?v=7">
+  <script src="motion.js?v=7"></script>
+  <script src="nav.js?v=7" defer></script>
+  <script src="film.js?v=7" defer></script>
 
   <script type="application/ld+json">
   {
@@ -117,6 +118,17 @@
           <span class="spec-detail">DIN-A4-Eigenbeleg und EXTF-Buchungsstapel (SKR03 / SKR04)</span>
         </li>
       </ul>
+
+      <!-- ============ Film ============ -->
+      <!-- Lädt erst beim Abspielen (preload="none"); ohne JavaScript greifen die normalen Bedienelemente. -->
+      <figure class="lp-film" aria-label="ChargeMerge-Film">
+        <video controls playsinline preload="none" width="1280" height="720" poster="assets/chargemerge-film-poster.jpg">
+          <source src="assets/chargemerge-film.mp4" type="video/mp4">
+        </video>
+        <button class="lp-film-play" type="button" aria-label="Video abspielen" hidden>
+          <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><path d="M10 6.5v15l12-7.5z" fill="currentColor"/></svg>
+        </button>
+      </figure>
 
       <!-- ============ Funktionen ============ -->
       <section class="lp-section" id="funktionen" aria-labelledby="funktionen-title">

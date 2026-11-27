@@ -13,6 +13,7 @@
   /* Auswahl → Art des Einblendens (rise = aufsteigen, zoom = aufsteigen + heranzoomen, fade = nur einblenden) */
   const TARGETS = [
     [".lp-facts > li", "rise"],
+    [".lp-film", "zoom"],
     [".lp-section-head", "rise"],
     [".lp-feature-text", "rise"],
     [".lp-window, .lp-phone-shot", "zoom"],
